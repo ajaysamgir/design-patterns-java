@@ -4,7 +4,7 @@ Types
 - Structural 
 - Behavioral
 
-1. Creational Design pattern in java
+## 1. Creational Design pattern in java
 - Pattern is way of good communication, reusability, abstraction
 - This pattern provides best ways to create objects in application. 
 
@@ -21,7 +21,6 @@ Main types of creational patterns
 - Singleton class should have private instance and private construtor to manage instance creation and maintain by there own only.
 - Singleton returns same instance everytime and it have only one construtor with no arguments.
 - Singleton class does not implements any interface due to it have private construtor and instance.
-- 
 
 Problems with sigleton
 - use static mechanism is always heavy
