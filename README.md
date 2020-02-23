@@ -30,8 +30,29 @@ Problems with sigleton
 ## Builder Pattern
 - Builder pattern is aften use but its rare to create own builder pattern. this pattern is very useful when we have to construct the object may    contains a lots of parameter and we want to make a object immutable once done the construction. 
 - with Builder patern we can force the object to immutability once created. 
-- Best examples in Java API is StringBuilder class, DocumentBuilder class for complex object creation, Local.Builder is another example which take multiple parameters as a part of its construction.
+- Best examples in Java API is StringBuilder class, DocumentBuilder class for complex object creation, 
+  Local.Builder is another example which take multiple parameters as a part of its construction.
 - Builder pattern typically use static inner class in implemenation 
+- Builder pattern handle complex constructors 
+- No interface required as a static inner class does eerything.
+- Helps developers to works with legacy code and aviod rework.
 
-StringBuilder
+Example : StringBuilder
 - this is good example of builder design pattern which helps in performance, easy way to build a string rather than using + operator etc, faster than string buffer.   
+
+### Pros
+1) Code is more maintainable if number of fields required to create object is more than 4 or 5.
+2) Object Creation code less error-prone as user will know what they are passing because of explicit method call.
+3) Builder pattern increase robustness, as only fully constructed object will be available to client.
+4) You can force immutability to the object once its created.
+### Cons
+1) Builder pattern is verbose and requires code duplication as Builder needs to copy all fields from Original or Item class.
+2) Inner static class may cause for increase memory usage.
+
+## Prototype Pattern
+- It implement cloning mechanism and avoid calling complex constructors 
+- Prototype works against Builder pattern its avoid subclassing, low cos.
+- Prototype dont use new keyword, first instance may use new keyword but after that they use clone() method 
+- Prototype normalaly use interfaces
+- Prototype create a registry and keep object in registry when first time created then they clone new object from registry when needed nexr time.
+- 
