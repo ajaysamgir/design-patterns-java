@@ -55,4 +55,31 @@ Example : StringBuilder
 - Prototype dont use new keyword, first instance may use new keyword but after that they use clone() method 
 - Prototype normalaly use interfaces
 - Prototype create a registry and keep object in registry when first time created then they clone new object from registry when needed nexr time.
-- 
+- Best example in java is java.lang.Object#clone method
+- Prototype use clone() or Clonable interface in design.
+- Each instance is copied but unique
+- As the architect you can choose wheather you want to do a shallow vs deep copy. A shallow copy is just copies the immediate properties where as deep copy copies references of object too. 
+*example is pending
+
+## Factory Pattern
+- Most often used pattern
+- It doesnt expose the instantiation logic (highly abstraction), client can use the object but not aware about implemenation
+- All client knows is common interface which factory pattern use is.
+- Examples in java API is :
+  - Calender
+  - Resource Bundle
+  - NumberFormat
+- Factory pattern is responsible for object lifecycle
+- designed with common interfaces and concrete classes and use parameterized create method 
+
+## AbstractFactory Pattern
+- AbstractFactory pattern is typically similar as factory pattern typically it is created as a factory of factory pattern
+- It also take a concept of common interface a step further. the common interface is implement through out the abstract factory and its underlying factories just like a the factory method pattern is differing the instantiation or creation logic to subclass as well. 
+- Examples
+  - DocumentBuilder 
+  - Dao layer factories
+- Design
+  - Groups factories together
+  - Responsible for object lifecycle
+  - Common interface
+  - use parameterized create method
