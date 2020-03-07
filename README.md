@@ -127,3 +127,26 @@ Arrays.asList() method helps to adopt list of strings and convert it into new co
 But in above example there is only one adapter which can return only Strings list because we are catching items inside ArrayList<Strings> only.
 
 Exercise :
+
+### Pitfalls
+- Dont do much complication otherwise it will creates problem
+- Dont add functionality rather than use decorator pattern
+
+### Contrast (Adapter vs Bridge Patrterns)
+- Adapter pattern work after code design, Bridge pattern use upfront 
+- Use mainly for legacy code, Bridge use for maintain abstarction in implemenation
+- Adapeters are Retrofitted
+- Provide seperate interface between new and old code
+
+## Bridge design pattern
+- Brigde pattern is works similar as adapter pattern but main difference is Adapeters work with legacy code and bridge works with new code.
+
+### Concept
+- Decouple the abstarction and implemenation.
+- Utilize encapsulation, composition, inheritance
+- Key concept of Bridge pattern is changes in abstarction layer does not impact on client.
+- Drivers are good example of bridge patterns. JDBCDriver class 
+### Example
+```
+Connection conn = DriverManager.getConnection(dbUrl);
+```
