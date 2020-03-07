@@ -1,8 +1,13 @@
 # Design Patterns In Java
+Why Design pattern is important?
+- Patrterns are means of communicating a problem to another developer, he may very well known that how to solve a problem and might follow a structure of a pattern but better to have a common vocabulary to explsin the someone a what is the problem.
+- Patterna are a abstract topics it isn't something that you look at the concept and then have a memorized from there. 
+- Resuse pattern material is always good idea in building software.
+ 
 Types
-- Creational
-- Structural 
-- Behavioral
+- Creational : ways to create objects
+- Structural : focus on how you use or utilize object for better performance, refactoring or memory utilization
+- Behavioral : 
 
 # 1. Creational Design pattern in java
 - Pattern is way of good communication, reusability, abstraction
@@ -83,3 +88,42 @@ Example : StringBuilder
   - Responsible for object lifecycle
   - Common interface
   - use parameterized create method
+- Problems
+  - Complex than others
+  
+## Factory vs AbstractFactory
+- Factory pattern returns verious instances and multiple constructors, 
+- Factory pattern is interface driven 
+- Factory pattern adopts environment more easily
+- AbstractFactory build with composition and it is based on factory pattern.
+- AbstractFactory is totally abstarct environment and its hide factory pattern from client.
+
+# Structural design pattern in Java
+- Adapter
+- Decorator
+- Bridge
+- Composite
+- Facade
+- Flyweight
+- Proxy
+
+## Adapter Design Patrterns
+- Adapter pattern is the greate pattern to connecting new code to legacy code without having to change working contract that was produced from legacy code oroginally.
+Real Time example - Adapter Plug
+### Concept
+- As mentioned, if client trying to access older code which we not able to remove or somehow not able to change in that case we can write adapter layer between client and legacy code.
+### Example
+- In java collections API, specifically the usage of the arrays to list conversation. Arrays were original or you could classify as a legacy API ans list is newer part of the collection API introdued later. 
+- There are methods in collection API to adapt arrays to lists. 
+- Another latest example in java API are stream classes surrounding I/O. Almost all of the stream classes have a adapter to work with other streams.
+### Design
+- Adapeters are totally client centric which typically implemented to adapt or integrate a new client to legacy code.
+
+### Example
+```
+ArrayList<String> list = Arrays.asList(arrayOfStrings); 
+```
+Arrays.asList() method helps to adopt list of strings and convert it into new code of java i.e list.
+But in above example there is only one adapter which can return only Strings list because we are catching items inside ArrayList<Strings> only.
+
+Exercise :
