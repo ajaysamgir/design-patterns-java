@@ -150,3 +150,22 @@ Exercise :
 ```
 Connection conn = DriverManager.getConnection(dbUrl);
 ```
+(revisit)
+
+## Composite Pattern
+- THis is hierachical design pattern.
+- Best example is RESTful services GETs methods are almost always build with composite structure in mind.
+(revisit)
+
+## Decorator Pattern
+- Decorator pattern is hierachical pattern that build functionality at each level while using composition in similar datatypes.
+
+### Concept
+- Wrapper classes is best example of this pattern which is add new decorative features to existing classes.
+- Addtional or decorative features is not make any impact on exiting behaviour. 
+- Decorator pattern is just nore than inheritance and its follow Single responsibility principle.
+- Single responsibility principle means do one thing only but do it well.
+
+### Design
+- decorator pattern is combination of inheritance and composition.
+- 
